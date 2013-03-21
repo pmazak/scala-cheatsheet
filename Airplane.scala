@@ -20,8 +20,8 @@ class Airplane(title:String) {
   // Public method
   def destination = {
     try {
-    	// Call method without () when no parameters
-    	land
+      // Call method without () when no parameters
+      land
     }
     catch {
       // Exceptions are case statements
