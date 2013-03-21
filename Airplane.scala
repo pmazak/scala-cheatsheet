@@ -19,8 +19,14 @@ class Airplane(title:String) {
   
   // Public method
   def destination = {
-    // Call method without () when no parameters
-    land
+    try {
+    	// Call method without () when no parameters
+    	land
+    }
+    catch {
+      // Exceptions are case statements
+      case npe:NullPointerException => "oh well"
+    }
   }
   // Private method with parameter and return type
   private def fly(direction:String) :Boolean = {
@@ -52,8 +58,6 @@ object AirplaneInstance {
         propJet.show(null)
     }
 }
-
-
 
 // Case allows pattern matching on classes in switch statements i.e. :Seat =>
 case class Seat(tray: TrayTable, belt: SeatBelt)
